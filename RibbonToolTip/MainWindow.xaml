@@ -1,0 +1,48 @@
+﻿<Window x:Class="RibbonToolTip.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RibbonToolTip"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Ribbon>
+            <RibbonTab>
+                <RibbonComboBox>
+                    <RibbonGallery>
+                        <RibbonGalleryCategory x:Name="ZoomComboboxGalleryCategory">
+                            <RibbonGalleryItem  Content="Auto" IsSelected="True" />
+                            <RibbonGalleryItem  Content="25%"/>
+                            <RibbonGalleryItem  Content="50%"/>
+                            <RibbonGalleryItem  Content="100%"/>
+                            <RibbonGalleryItem  Content="200%"/>
+                            <RibbonGalleryItem  Content="400%"/>
+                            <RibbonGalleryItem  Content="800%"/>
+                        </RibbonGalleryCategory>
+                        <RibbonGallery.ToolTip>
+                            <ToolTip Content="ASDF"/>
+                        </RibbonGallery.ToolTip>
+                    </RibbonGallery>
+                </RibbonComboBox>
+                <RibbonMenuButton>
+                    <RibbonMenuItem Header="Button1">
+                        <RibbonMenuItem.ToolTip>
+                            <ToolTip Content="RibbonDropdownButton1"/>
+                        </RibbonMenuItem.ToolTip>
+                    </RibbonMenuItem>
+                    <RibbonMenuItem Header="Button2">
+                        <RibbonMenuItem.ToolTip>
+                            <ToolTip  Content="RibbonDropdownButton1"/>
+                        </RibbonMenuItem.ToolTip>
+                    </RibbonMenuItem>
+                </RibbonMenuButton>
+                <RibbonButton Width="100" Height="50" Label="Button3">
+                    <RibbonButton.ToolTip>
+                        <ToolTip Content="RibbonButton3Working"/>
+                    </RibbonButton.ToolTip>
+                </RibbonButton>
+            </RibbonTab>
+        </Ribbon>
+    </Grid>
+</Window>
